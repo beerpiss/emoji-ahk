@@ -1,4 +1,4 @@
-<h1 align="center">Emoji to AHK</h1>
+<h1 align="center">emoji-ahk</h1>
 
 This is an AHK script to automatically replace your emojis from their shortcodes (`:emoji_name:` in platforms like Discord, Slack, GitHub) anywhere on your machine.
 
