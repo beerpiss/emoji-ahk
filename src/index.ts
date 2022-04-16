@@ -38,7 +38,7 @@ async function main(): Promise<void> {
   if (!existsSync('./dist')) {
     mkdirSync('./dist')
   }
-  writeFileSync('./dist/emoji.ahk', `\ufeff${ahkHeader}\n${disabledProcesses}\n`, { flag: 'w' });
+  writeFileSync('./dist/emoji.ahk', `\ufeff${ahkHeader}\n#If ${disabledProcesses}\n`, { flag: 'w' });
 
   switch (variant) {
     // @ts-ignore
