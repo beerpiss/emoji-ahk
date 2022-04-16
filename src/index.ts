@@ -35,10 +35,10 @@ function getAllDiscordEmojis(): { [key: string]: any } {
 }
 
 async function main(): Promise<void> {
-  if (!existsSync('./output')) {
-    mkdirSync('./output')
+  if (!existsSync('./dist')) {
+    mkdirSync('./dist')
   }
-  writeFileSync('./output/emoji.ahk', `\ufeff${ahkHeader}\n${disabledProcesses}\n`, { flag: 'w' });
+  writeFileSync('./dist/emoji.ahk', `\ufeff${ahkHeader}\n${disabledProcesses}\n`, { flag: 'w' });
 
   switch (variant) {
     // @ts-ignore
@@ -55,7 +55,7 @@ async function main(): Promise<void> {
           `; ${emojiName}`,
           `:::${emojiName.substring(0, 39)}::${emoji}\n`,
         ].join('\n');
-        writeFileSync('./output/emoji.ahk', content, { flag: 'a' });
+        writeFileSync('./dist/emoji.ahk', content, { flag: 'a' });
       })
       break;
     }
@@ -77,7 +77,7 @@ async function main(): Promise<void> {
           ]);
         }
         content[content.length - 1] = `${content[content.length - 1]}\n`;
-        writeFileSync('./output/emoji.ahk', content.join('\n'), { flag: 'a' });
+        writeFileSync('./dist/emoji.ahk', content.join('\n'), { flag: 'a' });
       });
       break;
     }

@@ -4,7 +4,7 @@
   "description": "Helper for building an AHK script to type emojis with shortcodes",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "ts-node src/index.ts"
   },
   "author": "beerpsi",
   "license": "0BSD",

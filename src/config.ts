@@ -8,7 +8,6 @@ export const variant = Shortcode.COMMON; // use Shortcode.DISCORD if you want Di
  * The key is the old shortcode, and the value is the replacement.
  */
 export const replacements: Record<string, string> = {
-  'hash': 'hashtag',
 };
 
 /**
@@ -16,4 +15,5 @@ export const replacements: Record<string, string> = {
  */
 export const disabledProcesses = [
   "Discord.exe",
+  "slack.exe",
 ].map(m => `#IfWinNotActive, ahk_exe ${m}`);
