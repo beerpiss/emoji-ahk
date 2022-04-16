@@ -9,6 +9,7 @@
   "author": "beerpsi",
   "license": "0BSD",
   "dependencies": {
+    "axios": "^0.26.1",
     "discord-emoji": "^2.0.5"
   },
   "devDependencies": {
