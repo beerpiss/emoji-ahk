@@ -16,4 +16,4 @@ export const replacements: Record<string, string> = {
 export const disabledProcesses = [
   "Discord.exe",
   "slack.exe",
-].map(m => `#IfWinNotActive, ahk_exe ${m}`);
+].map(m => `#IfWinNotActive, ahk_exe ${m}`).join('\n');
